@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 squares and  cubes</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        table{
+            border: 1px solid #c0c0c0;
+        }
+        table tbody tr td,
+        table thead tr th{
+            padding: 10px;
+            border: 1px solid #c0c0c0;
+        }
+    </style>
+</head>
+<body onload="square_cubes()">
+    <h1>SQUARES AND CUBES</h1>
+    <table>
+        <thead>
+            <tr>
+               <th>NUMBER</th>
+               <th>SQUARE</th>
+               <th>CUBE</th> 
+            </tr>
+        </thead>
+        <tbody id="table-body">
+
+        </tbody>
+    </table>
+    <script>
+        function square_cubes(){
+            let table_body=document.getElementById("table-body");
+            data="";
+            for(let i=1;i<=10;i++){
+                data+=<tr>
+                    <td>${i}</td>
+                    <td>${i*i}</td>
+                    <td>${i*i*i}</td>
+                    </tr>;
+                
+
+            }
+            table_body.innerHTML=data;
+        }
+    </script>
+
+    
+</body>
+</html>
